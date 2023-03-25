@@ -1,11 +1,12 @@
 import './globals.css'
 import Nav from './auth/Nav'
-import { Roboto } from "@next/font/google"
+import {Roboto} from "@next/font/google"
+import QueryWrapper from "@/app/QueryWrapper";
 
 const roboto = Roboto({
-    subsets: ["latin"],
-    weight: ["400", "700"],
-    variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-roboto",
 })
 
 export const metadata = {
@@ -14,19 +15,21 @@ export const metadata = {
 }
 
 // @ts-ignore
-export default function RootLayout({ children }) {
-    return (
+export default function RootLayout({children}) {
+  return (
     <html lang="en">
     {
       /* body */
     }
-      <head />
+    <head/>
     <body
-        className={`mx-4 md:mx-48 xl:mx-96 ${roboto.variable} font-sans bg-gray-200`}
+      className={`mx-4 md:mx-48 xl:mx-96 ${roboto.variable} font-sans bg-gray-200`}
     >
-        <Nav />
-        {children}
-      </body>
+    <QueryWrapper>
+      <Nav/>
+      {children}
+    </QueryWrapper>
+    </body>
     </html>
   )
 }
