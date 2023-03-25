@@ -36,3 +36,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 구글 인증 처리가 안 될 경우(Auth 2.0)
+구글 인증처리가 되지 않을 경우 - 브라우저에서 http://localhost:3000/api/auth/callback/google 접속해서 인증처리
